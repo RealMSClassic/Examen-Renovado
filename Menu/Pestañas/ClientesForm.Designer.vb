@@ -228,12 +228,14 @@ Partial Class ClientesForm
         '
         Me.menuFiltro.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClienteOps, Me.TelefonoOps, Me.CorreoOps})
         Me.menuFiltro.Name = "menuFiltro"
-        Me.menuFiltro.Size = New System.Drawing.Size(120, 70)
+        Me.menuFiltro.Size = New System.Drawing.Size(181, 92)
         '
         'ClienteOps
         '
+        Me.ClienteOps.Checked = True
+        Me.ClienteOps.CheckState = System.Windows.Forms.CheckState.Checked
         Me.ClienteOps.Name = "ClienteOps"
-        Me.ClienteOps.Size = New System.Drawing.Size(119, 22)
+        Me.ClienteOps.Size = New System.Drawing.Size(180, 22)
         Me.ClienteOps.Text = "Clientes"
         '
         'TelefonoOps

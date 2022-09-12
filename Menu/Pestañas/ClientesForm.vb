@@ -1,7 +1,7 @@
 ﻿Imports Negocio
 Public Class ClientesForm
     Dim consulta As Consulta_Clientes = New Consulta_Clientes
-
+    Dim llaveBusqueda As String = "Cliente"
     Private Sub ClientesForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Cargar_Clientes()
         InicioHabilitar()
@@ -90,7 +90,7 @@ Public Class ClientesForm
         txtNombre.Text = ""
         txtTelefono.Text = ""
 
-        txtBuscar.Enabled = False
+        txtBuscar.Enabled = True
         txtCorreo.Enabled = False
         txtID.Enabled = False
         txtNombre.Enabled = False
@@ -175,22 +175,37 @@ Public Class ClientesForm
     End Sub
 
     Private Sub ClienteOps_Click(sender As Object, e As EventArgs) Handles ClienteOps.Click
-        ClienteOps.CheckState = True
-        TelefonoOps.CheckState = False
-        CorreoOps.CheckState = False
+        ClienteOps.Checked = True
+        TelefonoOps.Checked = False
+        CorreoOps.Checked = False
+        llaveBusqueda = "Cliente"
     End Sub
 
     Private Sub TelefonoOps_Click(sender As Object, e As EventArgs) Handles TelefonoOps.Click
-        ClienteOps.CheckState = False
-        TelefonoOps.CheckState = True
-        CorreoOps.CheckState = False
+        ClienteOps.Checked = False
+        TelefonoOps.Checked = True
+        CorreoOps.Checked = False
+        llaveBusqueda = "Telefono"
     End Sub
 
     Private Sub CorreoOps_Click(sender As Object, e As EventArgs) Handles CorreoOps.Click
-        ClienteOps.CheckState = False
-
-        TelefonoOps.CheckState = False
-        CorreoOps.CheckState = True
+        ClienteOps.Checked = False
+        TelefonoOps.Checked = False
+        CorreoOps.Checked = True
+        llaveBusqueda = "Correo"
     End Sub
 
+    Private Sub txtBuscar_TextChanged(sender As Object, e As EventArgs) Handles txtBuscar.TextChanged
+        If txtBuscar.Text = "" Then
+            Cargar_Clientes()
+        Else
+
+
+            Dim k As New DataView(consulta.Cargar_Datos)
+            k.RowFilter = String.Format(" {0} like '%{1}%'", llaveBusqueda, txtBuscar.Text)
+            dgwClientes.DataSource = k
+            dgwClientes.Columns("ID").Visible = False
+            'dgwClientes.Columns("IDCliente").Visible = False
+        End If
+    End Sub
 End Class

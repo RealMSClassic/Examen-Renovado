@@ -22,8 +22,8 @@ Partial Class ProductosForm
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.btnEditar = New System.Windows.Forms.Button()
-        Me.cbxFiltro = New System.Windows.Forms.ComboBox()
         Me.btnActualizar = New System.Windows.Forms.Button()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -31,7 +31,6 @@ Partial Class ProductosForm
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnAgregar = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.txtCategoria = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtPrecio = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -41,8 +40,15 @@ Partial Class ProductosForm
         Me.btnNuevo = New System.Windows.Forms.Button()
         Me.txtID = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.menuFiltro = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.ProductoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CategoriaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.filtroCbx = New System.Windows.Forms.ToolStripComboBox()
+        Me.btnFiltros = New System.Windows.Forms.Button()
+        Me.txtCategoria = New System.Windows.Forms.ComboBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgwProductos, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.menuFiltro.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnEditar
@@ -53,16 +59,6 @@ Partial Class ProductosForm
         Me.btnEditar.TabIndex = 33
         Me.btnEditar.Text = "Editar"
         Me.btnEditar.UseVisualStyleBackColor = True
-        '
-        'cbxFiltro
-        '
-        Me.cbxFiltro.FormattingEnabled = True
-        Me.cbxFiltro.Items.AddRange(New Object() {"Clientes" & Global.Microsoft.VisualBasic.ChrW(9), "Telefono", "Correo"})
-        Me.cbxFiltro.Location = New System.Drawing.Point(506, 145)
-        Me.cbxFiltro.Name = "cbxFiltro"
-        Me.cbxFiltro.Size = New System.Drawing.Size(98, 21)
-        Me.cbxFiltro.TabIndex = 39
-        Me.cbxFiltro.Text = "Clientes"
         '
         'btnActualizar
         '
@@ -118,19 +114,13 @@ Partial Class ProductosForm
         '
         'Button2
         '
+        Me.Button2.Enabled = False
         Me.Button2.Location = New System.Drawing.Point(456, 102)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 31
-        Me.Button2.Text = "Button2"
+        Me.Button2.Text = "Cargar"
         Me.Button2.UseVisualStyleBackColor = True
-        '
-        'txtCategoria
-        '
-        Me.txtCategoria.Location = New System.Drawing.Point(295, 43)
-        Me.txtCategoria.Name = "txtCategoria"
-        Me.txtCategoria.Size = New System.Drawing.Size(100, 20)
-        Me.txtCategoria.TabIndex = 30
         '
         'Label4
         '
@@ -210,13 +200,60 @@ Partial Class ProductosForm
         Me.Label1.TabIndex = 21
         Me.Label1.Text = "ID"
         '
+        'menuFiltro
+        '
+        Me.menuFiltro.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProductoToolStripMenuItem, Me.CategoriaToolStripMenuItem})
+        Me.menuFiltro.Name = "menuFiltro"
+        Me.menuFiltro.Size = New System.Drawing.Size(126, 48)
+        '
+        'ProductoToolStripMenuItem
+        '
+        Me.ProductoToolStripMenuItem.Name = "ProductoToolStripMenuItem"
+        Me.ProductoToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
+        Me.ProductoToolStripMenuItem.Text = "Producto"
+        '
+        'CategoriaToolStripMenuItem
+        '
+        Me.CategoriaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.filtroCbx})
+        Me.CategoriaToolStripMenuItem.Name = "CategoriaToolStripMenuItem"
+        Me.CategoriaToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
+        Me.CategoriaToolStripMenuItem.Text = "Categoria"
+        '
+        'filtroCbx
+        '
+        Me.filtroCbx.Items.AddRange(New Object() {"Varios", "Alimentos" & Global.Microsoft.VisualBasic.ChrW(9), "Limpieza", "Hogar", "Contruccion", "Herreria"})
+        Me.filtroCbx.Name = "filtroCbx"
+        Me.filtroCbx.Size = New System.Drawing.Size(121, 23)
+        '
+        'btnFiltros
+        '
+        Me.btnFiltros.ContextMenuStrip = Me.menuFiltro
+        Me.btnFiltros.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnFiltros.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnFiltros.Location = New System.Drawing.Point(581, 146)
+        Me.btnFiltros.Name = "btnFiltros"
+        Me.btnFiltros.Size = New System.Drawing.Size(23, 20)
+        Me.btnFiltros.TabIndex = 40
+        Me.btnFiltros.Text = "F"
+        Me.btnFiltros.UseVisualStyleBackColor = True
+        '
+        'txtCategoria
+        '
+        Me.txtCategoria.FormattingEnabled = True
+        Me.txtCategoria.Items.AddRange(New Object() {"Varios", "Alimentos" & Global.Microsoft.VisualBasic.ChrW(9), "Limpieza", "Hogar", "Contruccion", "Herreria"})
+        Me.txtCategoria.Location = New System.Drawing.Point(295, 42)
+        Me.txtCategoria.Name = "txtCategoria"
+        Me.txtCategoria.Size = New System.Drawing.Size(100, 21)
+        Me.txtCategoria.TabIndex = 41
+        '
         'ProductosForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(636, 357)
+        Me.Controls.Add(Me.txtCategoria)
+        Me.Controls.Add(Me.btnFiltros)
         Me.Controls.Add(Me.btnEditar)
-        Me.Controls.Add(Me.cbxFiltro)
         Me.Controls.Add(Me.btnActualizar)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.PictureBox1)
@@ -224,7 +261,6 @@ Partial Class ProductosForm
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.txtCategoria)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.txtPrecio)
         Me.Controls.Add(Me.Label3)
@@ -239,13 +275,13 @@ Partial Class ProductosForm
         Me.Text = "Form1"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgwProductos, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.menuFiltro.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents btnEditar As Button
-    Friend WithEvents cbxFiltro As ComboBox
     Friend WithEvents btnActualizar As Button
     Friend WithEvents btnCancelar As Button
     Friend WithEvents PictureBox1 As PictureBox
@@ -253,7 +289,6 @@ Partial Class ProductosForm
     Friend WithEvents btnEliminar As Button
     Friend WithEvents btnAgregar As Button
     Friend WithEvents Button2 As Button
-    Friend WithEvents txtCategoria As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents txtPrecio As TextBox
     Friend WithEvents Label3 As Label
@@ -263,4 +298,10 @@ Partial Class ProductosForm
     Friend WithEvents btnNuevo As Button
     Friend WithEvents txtID As TextBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents menuFiltro As ContextMenuStrip
+    Friend WithEvents btnFiltros As Button
+    Friend WithEvents ProductoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CategoriaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents txtCategoria As ComboBox
+    Friend WithEvents filtroCbx As ToolStripComboBox
 End Class

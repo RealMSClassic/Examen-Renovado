@@ -2,7 +2,7 @@
 Public Class ProductosForm
 
     Dim consultas As Consulta_Productos = New Consulta_Productos
-
+    Dim llaveBusqueda As String = "Cliente"
     Private Sub ClientesForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Cargar_Productos()
         InicioHabilitar()
@@ -44,7 +44,24 @@ Public Class ProductosForm
         End If
 
     End Sub
+    Private Sub ProductoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProductoToolStripMenuItem.Click
+        InicioHabilitar()
+        Cargar_Productos()
+        ProductoToolStripMenuItem.Checked = True
+        CategoriaToolStripMenuItem.Checked = False
+        txtBuscar.Enabled = True
 
+    End Sub
+
+    Private Sub filtroCbx_TextChanged(sender As Object, e As EventArgs) Handles filtroCbx.TextChanged
+        CategoriaToolStripMenuItem.Checked = True
+        ProductoToolStripMenuItem.Checked = False
+        Dim k As New DataView(consultas.Cargar_Datos_lista)
+        k.RowFilter = String.Format(" Categoria like '%{0}%'", filtroCbx.Text)
+        dgwProductos.DataSource = k
+        dgwProductos.Columns("ID").Visible = False
+        txtBuscar.Enabled = False
+    End Sub
 
 
     '------*********------------**************--------------****************------------*********
@@ -80,7 +97,7 @@ Public Class ProductosForm
     Private Sub cancelarNuevo()
         txtID.Clear()
         txtNombre.Clear()
-        txtCategoria.Clear()
+        txtCategoria.Text = "Varios"
         txtPrecio.Clear()
         InicioHabilitar()
 
@@ -93,7 +110,7 @@ Public Class ProductosForm
         txtNombre.Text = ""
         txtCategoria.Text = ""
 
-        txtBuscar.Enabled = False
+        txtBuscar.Enabled = True
         txtPrecio.Enabled = False
         txtID.Enabled = False
         txtNombre.Enabled = False
@@ -176,4 +193,22 @@ Public Class ProductosForm
 
         End If
     End Sub
+
+    Private Sub txtBuscar_TextChanged(sender As Object, e As EventArgs) Handles txtBuscar.TextChanged
+        If txtBuscar.Text = "" Then
+            Cargar_Productos()
+        Else
+
+
+            Dim k As New DataView(consultas.Cargar_Datos_lista)
+            k.RowFilter = String.Format("Nombre like '%{0}%'", txtBuscar.Text)
+            dgwProductos.DataSource = k
+            dgwProductos.Columns("ID").Visible = False
+            'dgwClientes.Columns("IDCliente").Visible = False
+        End If
+    End Sub
+
+
+
+
 End Class
