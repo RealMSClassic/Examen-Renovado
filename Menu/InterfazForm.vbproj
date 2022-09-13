@@ -73,10 +73,22 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pestañas\VentasForm.Designer.vb">
+    <Compile Include="ListaClientes.Designer.vb">
+      <DependentUpon>ListaClientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ListaClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pestañas\VentasForms\Resumen_VentaForm.Designer.vb">
+      <DependentUpon>Resumen_VentaForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pestañas\VentasForms\Resumen_VentaForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pestañas\VentasForms\VentasForm.Designer.vb">
       <DependentUpon>VentasForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="Pestañas\VentasForm.vb">
+    <Compile Include="Pestañas\VentasForms\VentasForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Pestañas\ProductosForm.Designer.vb">
@@ -115,6 +127,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ListaClientes.resx">
+      <DependentUpon>ListaClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pestañas\VentasForms\Resumen_VentaForm.resx">
+      <DependentUpon>Resumen_VentaForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pestañas\ClientesForm.resx">
       <DependentUpon>ClientesForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -130,7 +148,7 @@
     <EmbeddedResource Include="Pestañas\ProductosForm.resx">
       <DependentUpon>ProductosForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pestañas\VentasForm.resx">
+    <EmbeddedResource Include="Pestañas\VentasForms\VentasForm.resx">
       <DependentUpon>VentasForm.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
@@ -146,9 +164,7 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Pestañas\VentasForms\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Entidad\Entidad.vbproj">
       <Project>{47df1a41-8401-4c6c-b48a-043a07d28327}</Project>

@@ -171,6 +171,7 @@ Partial Class ProductosForm
         Me.dgwProductos.GridColor = System.Drawing.SystemColors.AppWorkspace
         Me.dgwProductos.Location = New System.Drawing.Point(35, 172)
         Me.dgwProductos.Name = "dgwProductos"
+        Me.dgwProductos.ReadOnly = True
         Me.dgwProductos.RowHeadersVisible = False
         Me.dgwProductos.Size = New System.Drawing.Size(569, 173)
         Me.dgwProductos.TabIndex = 24
