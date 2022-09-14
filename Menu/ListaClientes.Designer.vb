@@ -29,9 +29,12 @@ Partial Class ListaClientes
         '
         'dgvClientes
         '
+        Me.dgvClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvClientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvClientes.Location = New System.Drawing.Point(12, 69)
         Me.dgvClientes.Name = "dgvClientes"
+        Me.dgvClientes.RowHeadersVisible = False
         Me.dgvClientes.Size = New System.Drawing.Size(257, 217)
         Me.dgvClientes.TabIndex = 0
         '

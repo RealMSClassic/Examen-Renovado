@@ -34,14 +34,15 @@ Public Class Query_Venta
 
     Public Sub Ingresar(ByVal venta As Entidad_Venta, ByVal items As List(Of entidadVentaItem))
         Try
+            abrir()
             'cn.Close() 'cierro la conexion porque en algun lado queda abierta. Fijarse esto
 
-            cn.Open()
+            'cn.Open()
             'seteo la transaccion
             tran = cn.BeginTransaction()
 
             'al final de la query pongo SELECT SCOPE_IDENTITY() para obtener el id de la factura agregada
-            Dim query As String = "  INSERT INTO ventas (IDCliente,cONVERT(date,Fecha,26),Total)VALUES ('" & venta.IdCliente & "', '" & venta.Fecha & "', '" & venta.Total & "'); SELECT SCOPE_IDENTITY()"
+            Dim query As String = "  INSERT INTO ventas (IDCliente,convert(date,Fecha,26),Total)VALUES ('" & venta.IdCliente & "', '" & venta.Fecha & "', '" & venta.Total & "'); SELECT SCOPE_IDENTITY()"
             Dim adapte As New SqlCommand(query, cn, tran)
             'executescalar: obtiene el valor de la primera columna de la primera fila (el id de la venta en este caso)
             Dim id As Integer = adapte.ExecuteScalar()
@@ -66,7 +67,7 @@ Public Class Query_Venta
             MsgBox("En ingresar " + ex.Message)
             tran.Rollback()
         Finally
-            cn.Close()
+            cerrar()
         End Try
     End Sub
 

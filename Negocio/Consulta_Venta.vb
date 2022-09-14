@@ -16,10 +16,10 @@ Public Class Consulta_Venta
 
     'Resumen_VentaForm
     Public Function nuevaVenta(ByVal idcliente As Integer, ByVal total As Decimal) As Entidad_Venta
-
+        Dim fech = DateTime.Now
         Dim enti As Entidad_Venta = New Entidad_Venta
         enti.IdCliente = idcliente
-        enti.Fecha = Format(fecha, "yyyy,MM,dd  HH:mm ")
+        enti.Fecha = Format(fech, "yyyy,MM,dd  HH:mm ")
         enti.Total = total
 
         Return enti

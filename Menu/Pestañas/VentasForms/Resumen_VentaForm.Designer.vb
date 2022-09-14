@@ -23,6 +23,11 @@ Partial Class ResumenVentaForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.dgvResumen = New System.Windows.Forms.DataGridView()
+        Me.idProducto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.precioUnidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.precioTotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnFinalizar = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -31,26 +36,53 @@ Partial Class ResumenVentaForm
         Me.lblCliente = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.lblFecha = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.lblTotal = New System.Windows.Forms.Label()
-        Me.idProducto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.precioUnidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.precioTotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dgvResumen, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'dgvResumen
         '
+        Me.dgvResumen.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvResumen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvResumen.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idProducto, Me.nombre, Me.precioUnidad, Me.cantidad, Me.precioTotal})
         Me.dgvResumen.Location = New System.Drawing.Point(12, 100)
         Me.dgvResumen.Name = "dgvResumen"
+        Me.dgvResumen.ReadOnly = True
+        Me.dgvResumen.RowHeadersVisible = False
         Me.dgvResumen.Size = New System.Drawing.Size(596, 141)
         Me.dgvResumen.TabIndex = 0
+        '
+        'idProducto
+        '
+        Me.idProducto.HeaderText = "IDProducto"
+        Me.idProducto.Name = "idProducto"
+        Me.idProducto.ReadOnly = True
+        Me.idProducto.Visible = False
+        '
+        'nombre
+        '
+        Me.nombre.HeaderText = "Producto"
+        Me.nombre.Name = "nombre"
+        Me.nombre.ReadOnly = True
+        '
+        'precioUnidad
+        '
+        Me.precioUnidad.HeaderText = "Precio Unidad"
+        Me.precioUnidad.Name = "precioUnidad"
+        Me.precioUnidad.ReadOnly = True
+        '
+        'cantidad
+        '
+        Me.cantidad.HeaderText = "Cantidad"
+        Me.cantidad.Name = "cantidad"
+        Me.cantidad.ReadOnly = True
+        '
+        'precioTotal
+        '
+        Me.precioTotal.HeaderText = "Total"
+        Me.precioTotal.Name = "precioTotal"
+        Me.precioTotal.ReadOnly = True
         '
         'btnFinalizar
         '
@@ -64,7 +96,7 @@ Partial Class ResumenVentaForm
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(21, 33)
+        Me.Label1.Location = New System.Drawing.Point(21, 35)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(39, 13)
         Me.Label1.TabIndex = 2
@@ -76,7 +108,7 @@ Partial Class ResumenVentaForm
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 3
-        Me.Button2.Text = "Button2"
+        Me.Button2.Text = "Clientes"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'lblID
@@ -100,7 +132,7 @@ Partial Class ResumenVentaForm
         'lblCliente
         '
         Me.lblCliente.AutoSize = True
-        Me.lblCliente.Location = New System.Drawing.Point(91, 33)
+        Me.lblCliente.Location = New System.Drawing.Point(91, 35)
         Me.lblCliente.Name = "lblCliente"
         Me.lblCliente.Size = New System.Drawing.Size(16, 13)
         Me.lblCliente.TabIndex = 6
@@ -109,7 +141,7 @@ Partial Class ResumenVentaForm
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(208, 9)
+        Me.Label5.Location = New System.Drawing.Point(469, 9)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(37, 13)
         Me.Label5.TabIndex = 7
@@ -118,29 +150,11 @@ Partial Class ResumenVentaForm
         'lblFecha
         '
         Me.lblFecha.AutoSize = True
-        Me.lblFecha.Location = New System.Drawing.Point(287, 9)
+        Me.lblFecha.Location = New System.Drawing.Point(534, 9)
         Me.lblFecha.Name = "lblFecha"
         Me.lblFecha.Size = New System.Drawing.Size(16, 13)
         Me.lblFecha.TabIndex = 8
         Me.lblFecha.Text = "..."
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(208, 33)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(39, 13)
-        Me.Label7.TabIndex = 9
-        Me.Label7.Text = "Label7"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(287, 33)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(16, 13)
-        Me.Label8.TabIndex = 10
-        Me.Label8.Text = "..."
         '
         'Label9
         '
@@ -160,32 +174,6 @@ Partial Class ResumenVentaForm
         Me.lblTotal.TabIndex = 12
         Me.lblTotal.Text = "..."
         '
-        'idProducto
-        '
-        Me.idProducto.HeaderText = "IDProducto"
-        Me.idProducto.Name = "idProducto"
-        Me.idProducto.Visible = False
-        '
-        'nombre
-        '
-        Me.nombre.HeaderText = "Producto"
-        Me.nombre.Name = "nombre"
-        '
-        'precioUnidad
-        '
-        Me.precioUnidad.HeaderText = "Precio Unidad"
-        Me.precioUnidad.Name = "precioUnidad"
-        '
-        'cantidad
-        '
-        Me.cantidad.HeaderText = "Cantidad"
-        Me.cantidad.Name = "cantidad"
-        '
-        'precioTotal
-        '
-        Me.precioTotal.HeaderText = "Total"
-        Me.precioTotal.Name = "precioTotal"
-        '
         'ResumenVentaForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -193,8 +181,6 @@ Partial Class ResumenVentaForm
         Me.ClientSize = New System.Drawing.Size(620, 318)
         Me.Controls.Add(Me.lblTotal)
         Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.lblFecha)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.lblCliente)
@@ -221,8 +207,6 @@ Partial Class ResumenVentaForm
     Friend WithEvents lblCliente As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents lblFecha As Label
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents lblTotal As Label
     Friend WithEvents idProducto As DataGridViewTextBoxColumn

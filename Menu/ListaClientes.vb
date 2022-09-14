@@ -7,9 +7,7 @@ Public Class ListaClientes
         dgvClientes.DataSource = consultaCliente.Cargar_Datos()
     End Sub
 
-    Private Sub dgvClientes_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvClientes.CellDoubleClick
 
-    End Sub
 
     Private Sub dgvClientes_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvClientes.CellContentClick
         If Not dgvClientes.Item(0, dgvClientes.CurrentRow.Index).Value.ToString = "" Then
