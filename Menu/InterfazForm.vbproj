@@ -73,6 +73,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HistorialForm.Designer.vb">
+      <DependentUpon>HistorialForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HistorialForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ListaClientes.Designer.vb">
       <DependentUpon>ListaClientes.vb</DependentUpon>
     </Compile>
@@ -127,6 +133,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="HistorialForm.resx">
+      <DependentUpon>HistorialForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ListaClientes.resx">
       <DependentUpon>ListaClientes.vb</DependentUpon>
     </EmbeddedResource>
