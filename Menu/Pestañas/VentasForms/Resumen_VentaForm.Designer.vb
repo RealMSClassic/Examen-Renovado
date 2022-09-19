@@ -34,8 +34,6 @@ Partial Class ResumenVentaForm
         Me.lblID = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.lblCliente = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.lblFecha = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.lblTotal = New System.Windows.Forms.Label()
         CType(Me.dgvResumen, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -138,24 +136,6 @@ Partial Class ResumenVentaForm
         Me.lblCliente.TabIndex = 6
         Me.lblCliente.Text = "..."
         '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(469, 9)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(37, 13)
-        Me.Label5.TabIndex = 7
-        Me.Label5.Text = "Fecha"
-        '
-        'lblFecha
-        '
-        Me.lblFecha.AutoSize = True
-        Me.lblFecha.Location = New System.Drawing.Point(534, 9)
-        Me.lblFecha.Name = "lblFecha"
-        Me.lblFecha.Size = New System.Drawing.Size(16, 13)
-        Me.lblFecha.TabIndex = 8
-        Me.lblFecha.Text = "..."
-        '
         'Label9
         '
         Me.Label9.AutoSize = True
@@ -180,11 +160,10 @@ Partial Class ResumenVentaForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.RoyalBlue
         Me.ClientSize = New System.Drawing.Size(620, 318)
         Me.Controls.Add(Me.lblTotal)
         Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.lblFecha)
-        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.lblCliente)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.lblID)
@@ -193,7 +172,7 @@ Partial Class ResumenVentaForm
         Me.Controls.Add(Me.btnFinalizar)
         Me.Controls.Add(Me.dgvResumen)
         Me.Name = "ResumenVentaForm"
-        Me.Text = "Form1"
+        Me.Text = "Resumen"
         CType(Me.dgvResumen, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -207,8 +186,6 @@ Partial Class ResumenVentaForm
     Friend WithEvents lblID As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents lblCliente As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents lblFecha As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents lblTotal As Label
     Friend WithEvents idProducto As DataGridViewTextBoxColumn

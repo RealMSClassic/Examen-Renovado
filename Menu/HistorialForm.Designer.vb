@@ -120,7 +120,7 @@ Partial Class HistorialForm
         'dtpEnd
         '
         Me.dtpEnd.CustomFormat = "yyyy/MM/dd"
-        Me.dtpEnd.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.dtpEnd.Location = New System.Drawing.Point(183, 27)
         Me.dtpEnd.Name = "dtpEnd"
         Me.dtpEnd.Size = New System.Drawing.Size(141, 20)
@@ -130,7 +130,7 @@ Partial Class HistorialForm
         'dtpIni
         '
         Me.dtpIni.CustomFormat = "yyyy/MM/dd"
-        Me.dtpIni.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpIni.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.dtpIni.Location = New System.Drawing.Point(12, 27)
         Me.dtpIni.Name = "dtpIni"
         Me.dtpIni.Size = New System.Drawing.Size(146, 20)

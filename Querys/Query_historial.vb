@@ -43,8 +43,10 @@ FROM ventasitems vi inner join productos p on vi.IDProducto = p.ID where IDVenta
     Public Function FiltroFecha(ByVal a As DateTime, ByVal b As DateTime) As DataTable
         abrir()
         Try
+
+
             adaptador = New SqlDataAdapter("select v.ID,c.Cliente,v.IDCliente,cONVERT(date,v.Fecha,26)as Fecha,v.Total 
-            from ventas v inner join clientes c on v.IDCliente = c.ID where Fecha between Convert(datetime,'" & a & "',26) and convert(datetime,'" & b & "',26) ", cn)
+            from ventas v inner join clientes c on v.IDCliente = c.ID  where Fecha >= '" & a.ToString("yyyy-MM-dd") & "' and Fecha <= '" & b.ToString("yyyy-MM-dd") & "'", cn)
             dt = New DataTable
             adaptador.Fill(dt)
 

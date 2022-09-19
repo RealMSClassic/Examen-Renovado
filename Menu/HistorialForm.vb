@@ -65,11 +65,12 @@ Public Class HistorialForm
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
 
 
-        MsgBox(Format(dtpIni.Value, "yyyy/M/dd") + " " + Format(dtpEnd.Value, "yyyy/M/dd"))
+
         fecha()
     End Sub
     Private Sub fecha()
-        dgvHistorial.DataSource = consulta.filtrarXFecha(Format(dtpIni.Value, "short date"), Format(dtpEnd.Value, "short date"))
+        ' MsgBox(Format(dtpIni.Value, "yyyy/MM/dd").ToString + "" + Format(dtpEnd.Value, "yyyy/MM/dd").ToString)
+        dgvHistorial.DataSource = consulta.filtrarXFecha(dtpIni.Value, dtpEnd.Value)
 
     End Sub
 
