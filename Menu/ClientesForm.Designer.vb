@@ -23,6 +23,8 @@ Partial Class ClientesForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtID = New System.Windows.Forms.TextBox()
         Me.btnNuevo = New System.Windows.Forms.Button()
@@ -54,6 +56,7 @@ Partial Class ClientesForm
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label1.Location = New System.Drawing.Point(29, 20)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(18, 13)
@@ -62,13 +65,21 @@ Partial Class ClientesForm
         '
         'txtID
         '
-        Me.txtID.Location = New System.Drawing.Point(102, 17)
+        Me.txtID.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.txtID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtID.ForeColor = System.Drawing.Color.Transparent
+        Me.txtID.Location = New System.Drawing.Point(102, 20)
         Me.txtID.Name = "txtID"
         Me.txtID.Size = New System.Drawing.Size(100, 20)
         Me.txtID.TabIndex = 1
         '
         'btnNuevo
         '
+        Me.btnNuevo.FlatAppearance.BorderColor = System.Drawing.Color.CornflowerBlue
+        Me.btnNuevo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue
+        Me.btnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue
+        Me.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnNuevo.ForeColor = System.Drawing.Color.Black
         Me.btnNuevo.Location = New System.Drawing.Point(155, 102)
         Me.btnNuevo.Name = "btnNuevo"
         Me.btnNuevo.Size = New System.Drawing.Size(75, 23)
@@ -79,11 +90,28 @@ Partial Class ClientesForm
         'dgwClientes
         '
         Me.dgwClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dgwClientes.BackgroundColor = System.Drawing.SystemColors.ControlLight
-        Me.dgwClientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.dgwClientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        Me.dgwClientes.BackgroundColor = System.Drawing.Color.RoyalBlue
+        Me.dgwClientes.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgwClientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenVertical
+        Me.dgwClientes.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.RoyalBlue
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlLightLight
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgwClientes.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgwClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgwClientes.GridColor = System.Drawing.SystemColors.AppWorkspace
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.CornflowerBlue
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgwClientes.DefaultCellStyle = DataGridViewCellStyle4
+        Me.dgwClientes.GridColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.dgwClientes.Location = New System.Drawing.Point(32, 172)
         Me.dgwClientes.Name = "dgwClientes"
         Me.dgwClientes.ReadOnly = True
@@ -94,6 +122,10 @@ Partial Class ClientesForm
         '
         'txtNombre
         '
+        Me.txtNombre.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNombre.ForeColor = System.Drawing.Color.Transparent
         Me.txtNombre.Location = New System.Drawing.Point(292, 17)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(100, 20)
@@ -102,6 +134,7 @@ Partial Class ClientesForm
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label2.Location = New System.Drawing.Point(222, 50)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(49, 13)
@@ -110,6 +143,9 @@ Partial Class ClientesForm
         '
         'txtCorreo
         '
+        Me.txtCorreo.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtCorreo.ForeColor = System.Drawing.Color.Transparent
         Me.txtCorreo.Location = New System.Drawing.Point(102, 47)
         Me.txtCorreo.Name = "txtCorreo"
         Me.txtCorreo.Size = New System.Drawing.Size(100, 20)
@@ -118,6 +154,7 @@ Partial Class ClientesForm
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label3.Location = New System.Drawing.Point(29, 50)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(38, 13)
@@ -126,6 +163,9 @@ Partial Class ClientesForm
         '
         'txtTelefono
         '
+        Me.txtTelefono.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtTelefono.ForeColor = System.Drawing.Color.Transparent
         Me.txtTelefono.Location = New System.Drawing.Point(292, 43)
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(100, 20)
@@ -134,6 +174,7 @@ Partial Class ClientesForm
         'Label4
         '
         Me.Label4.AutoSize = True
+        Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label4.Location = New System.Drawing.Point(222, 20)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(44, 13)
@@ -143,6 +184,11 @@ Partial Class ClientesForm
         'Button2
         '
         Me.Button2.Enabled = False
+        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.CornflowerBlue
+        Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue
+        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.ForeColor = System.Drawing.Color.Black
         Me.Button2.Location = New System.Drawing.Point(453, 102)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
@@ -152,6 +198,11 @@ Partial Class ClientesForm
         '
         'btnAgregar
         '
+        Me.btnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.CornflowerBlue
+        Me.btnAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue
+        Me.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue
+        Me.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAgregar.ForeColor = System.Drawing.Color.Black
         Me.btnAgregar.Location = New System.Drawing.Point(236, 102)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(75, 23)
@@ -161,6 +212,11 @@ Partial Class ClientesForm
         '
         'btnEditar
         '
+        Me.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.CornflowerBlue
+        Me.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue
+        Me.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue
+        Me.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEditar.ForeColor = System.Drawing.Color.Black
         Me.btnEditar.Location = New System.Drawing.Point(236, 102)
         Me.btnEditar.Name = "btnEditar"
         Me.btnEditar.Size = New System.Drawing.Size(75, 23)
@@ -170,6 +226,11 @@ Partial Class ClientesForm
         '
         'btnEliminar
         '
+        Me.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.CornflowerBlue
+        Me.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue
+        Me.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue
+        Me.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEliminar.ForeColor = System.Drawing.Color.Black
         Me.btnEliminar.Location = New System.Drawing.Point(317, 102)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(75, 23)
@@ -179,7 +240,10 @@ Partial Class ClientesForm
         '
         'txtBuscar
         '
+        Me.txtBuscar.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtBuscar.Location = New System.Drawing.Point(32, 146)
+        Me.txtBuscar.Multiline = True
         Me.txtBuscar.Name = "txtBuscar"
         Me.txtBuscar.Size = New System.Drawing.Size(292, 20)
         Me.txtBuscar.TabIndex = 15
@@ -196,6 +260,11 @@ Partial Class ClientesForm
         '
         'btnCancelar
         '
+        Me.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.CornflowerBlue
+        Me.btnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue
+        Me.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue
+        Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCancelar.ForeColor = System.Drawing.Color.Black
         Me.btnCancelar.Location = New System.Drawing.Point(317, 102)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
@@ -205,6 +274,11 @@ Partial Class ClientesForm
         '
         'btnActualizar
         '
+        Me.btnActualizar.FlatAppearance.BorderColor = System.Drawing.Color.CornflowerBlue
+        Me.btnActualizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue
+        Me.btnActualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue
+        Me.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnActualizar.ForeColor = System.Drawing.Color.Black
         Me.btnActualizar.Location = New System.Drawing.Point(236, 102)
         Me.btnActualizar.Name = "btnActualizar"
         Me.btnActualizar.Size = New System.Drawing.Size(75, 23)
@@ -254,6 +328,7 @@ Partial Class ClientesForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.RoyalBlue
         Me.ClientSize = New System.Drawing.Size(636, 357)
         Me.Controls.Add(Me.btnFiltros)
         Me.Controls.Add(Me.btnEditar)
@@ -286,14 +361,10 @@ Partial Class ClientesForm
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents txtID As TextBox
     Friend WithEvents btnNuevo As Button
     Friend WithEvents dgwClientes As DataGridView
-    Friend WithEvents txtNombre As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents txtCorreo As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents txtTelefono As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents btnAgregar As Button
@@ -308,4 +379,8 @@ Partial Class ClientesForm
     Friend WithEvents ClienteOps As ToolStripMenuItem
     Friend WithEvents TelefonoOps As ToolStripMenuItem
     Friend WithEvents CorreoOps As ToolStripMenuItem
+    Private WithEvents txtID As TextBox
+    Private WithEvents txtNombre As TextBox
+    Private WithEvents txtCorreo As TextBox
+    Private WithEvents txtTelefono As TextBox
 End Class

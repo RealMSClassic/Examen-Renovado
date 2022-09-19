@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ProductosForm
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,9 +20,11 @@ Partial Class ProductosForm
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.btnEditar = New System.Windows.Forms.Button()
         Me.btnActualizar = New System.Windows.Forms.Button()
         Me.btnCancelar = New System.Windows.Forms.Button()
@@ -53,6 +55,10 @@ Partial Class ProductosForm
         '
         'btnEditar
         '
+        Me.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.CornflowerBlue
+        Me.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue
+        Me.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue
+        Me.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEditar.Location = New System.Drawing.Point(239, 102)
         Me.btnEditar.Name = "btnEditar"
         Me.btnEditar.Size = New System.Drawing.Size(75, 23)
@@ -62,6 +68,10 @@ Partial Class ProductosForm
         '
         'btnActualizar
         '
+        Me.btnActualizar.FlatAppearance.BorderColor = System.Drawing.Color.CornflowerBlue
+        Me.btnActualizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue
+        Me.btnActualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue
+        Me.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnActualizar.Location = New System.Drawing.Point(239, 102)
         Me.btnActualizar.Name = "btnActualizar"
         Me.btnActualizar.Size = New System.Drawing.Size(75, 23)
@@ -71,6 +81,10 @@ Partial Class ProductosForm
         '
         'btnCancelar
         '
+        Me.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.CornflowerBlue
+        Me.btnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue
+        Me.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue
+        Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancelar.Location = New System.Drawing.Point(320, 102)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
@@ -89,6 +103,8 @@ Partial Class ProductosForm
         '
         'txtBuscar
         '
+        Me.txtBuscar.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtBuscar.Location = New System.Drawing.Point(35, 146)
         Me.txtBuscar.Name = "txtBuscar"
         Me.txtBuscar.Size = New System.Drawing.Size(292, 20)
@@ -96,6 +112,10 @@ Partial Class ProductosForm
         '
         'btnEliminar
         '
+        Me.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.CornflowerBlue
+        Me.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue
+        Me.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue
+        Me.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEliminar.Location = New System.Drawing.Point(320, 102)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(75, 23)
@@ -105,6 +125,8 @@ Partial Class ProductosForm
         '
         'btnAgregar
         '
+        Me.btnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.CornflowerBlue
+        Me.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAgregar.Location = New System.Drawing.Point(239, 102)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(75, 23)
@@ -115,6 +137,10 @@ Partial Class ProductosForm
         'Button2
         '
         Me.Button2.Enabled = False
+        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.CornflowerBlue
+        Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue
+        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Location = New System.Drawing.Point(456, 102)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
@@ -125,6 +151,7 @@ Partial Class ProductosForm
         'Label4
         '
         Me.Label4.AutoSize = True
+        Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label4.Location = New System.Drawing.Point(225, 20)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(44, 13)
@@ -133,6 +160,8 @@ Partial Class ProductosForm
         '
         'txtPrecio
         '
+        Me.txtPrecio.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.txtPrecio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtPrecio.Location = New System.Drawing.Point(105, 47)
         Me.txtPrecio.Name = "txtPrecio"
         Me.txtPrecio.Size = New System.Drawing.Size(100, 20)
@@ -141,6 +170,7 @@ Partial Class ProductosForm
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label3.Location = New System.Drawing.Point(32, 50)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(37, 13)
@@ -149,6 +179,8 @@ Partial Class ProductosForm
         '
         'txtNombre
         '
+        Me.txtNombre.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtNombre.Location = New System.Drawing.Point(295, 17)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(100, 20)
@@ -157,6 +189,7 @@ Partial Class ProductosForm
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label2.Location = New System.Drawing.Point(225, 50)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(52, 13)
@@ -166,18 +199,42 @@ Partial Class ProductosForm
         'dgwProductos
         '
         Me.dgwProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dgwProductos.BackgroundColor = System.Drawing.SystemColors.ControlLight
+        Me.dgwProductos.BackgroundColor = System.Drawing.Color.RoyalBlue
+        Me.dgwProductos.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgwProductos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenVertical
+        Me.dgwProductos.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.RoyalBlue
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgwProductos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgwProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgwProductos.GridColor = System.Drawing.SystemColors.AppWorkspace
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.CornflowerBlue
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgwProductos.DefaultCellStyle = DataGridViewCellStyle2
+        Me.dgwProductos.GridColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.dgwProductos.Location = New System.Drawing.Point(35, 172)
         Me.dgwProductos.Name = "dgwProductos"
         Me.dgwProductos.ReadOnly = True
         Me.dgwProductos.RowHeadersVisible = False
+        Me.dgwProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgwProductos.Size = New System.Drawing.Size(569, 173)
         Me.dgwProductos.TabIndex = 24
         '
         'btnNuevo
         '
+        Me.btnNuevo.FlatAppearance.BorderColor = System.Drawing.Color.CornflowerBlue
+        Me.btnNuevo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue
+        Me.btnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue
+        Me.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnNuevo.Location = New System.Drawing.Point(158, 102)
         Me.btnNuevo.Name = "btnNuevo"
         Me.btnNuevo.Size = New System.Drawing.Size(75, 23)
@@ -187,6 +244,8 @@ Partial Class ProductosForm
         '
         'txtID
         '
+        Me.txtID.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.txtID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtID.Location = New System.Drawing.Point(105, 17)
         Me.txtID.Name = "txtID"
         Me.txtID.Size = New System.Drawing.Size(100, 20)
@@ -195,6 +254,7 @@ Partial Class ProductosForm
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label1.Location = New System.Drawing.Point(32, 20)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(18, 13)
@@ -240,6 +300,7 @@ Partial Class ProductosForm
         '
         'txtCategoria
         '
+        Me.txtCategoria.BackColor = System.Drawing.Color.CornflowerBlue
         Me.txtCategoria.FormattingEnabled = True
         Me.txtCategoria.Items.AddRange(New Object() {"Varios", "Alimentos" & Global.Microsoft.VisualBasic.ChrW(9), "Limpieza", "Hogar", "Contruccion", "Herreria"})
         Me.txtCategoria.Location = New System.Drawing.Point(295, 42)
@@ -251,6 +312,7 @@ Partial Class ProductosForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.RoyalBlue
         Me.ClientSize = New System.Drawing.Size(636, 357)
         Me.Controls.Add(Me.txtCategoria)
         Me.Controls.Add(Me.btnFiltros)
