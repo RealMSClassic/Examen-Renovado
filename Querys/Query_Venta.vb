@@ -42,7 +42,7 @@ Public Class Query_Venta
             tran = cn.BeginTransaction()
 
             'al final de la query pongo SELECT SCOPE_IDENTITY() para obtener el id de la factura agregada
-            Dim query As String = "  INSERT INTO ventas (IDCliente,convert(date,Fecha,26),Total)VALUES ('" & venta.IdCliente & "', '" & venta.Fecha & "', '" & venta.Total & "'); SELECT SCOPE_IDENTITY()"
+            Dim query As String = "  INSERT INTO ventas (IDCliente, Fecha, Total)VALUES ('" & venta.IdCliente & "', '" & venta.Fecha.ToString("yyyy-MM-dd") & "', '" & venta.Total & "'); SELECT SCOPE_IDENTITY()"
             Dim adapte As New SqlCommand(query, cn, tran)
             'executescalar: obtiene el valor de la primera columna de la primera fila (el id de la venta en este caso)
             Dim id As Integer = adapte.ExecuteScalar()

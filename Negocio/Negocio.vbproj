@@ -64,6 +64,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Consulta_Historial.vb" />
     <Compile Include="Consulta_Productos.vb" />
     <Compile Include="Consulta_Clientes.vb" />
     <Compile Include="Consulta_Venta.vb" />

@@ -90,7 +90,7 @@ Partial Class ResumenVentaForm
         Me.btnFinalizar.Name = "btnFinalizar"
         Me.btnFinalizar.Size = New System.Drawing.Size(75, 23)
         Me.btnFinalizar.TabIndex = 1
-        Me.btnFinalizar.Text = "Button1"
+        Me.btnFinalizar.Text = "Finalizar"
         Me.btnFinalizar.UseVisualStyleBackColor = True
         '
         'Label1
@@ -159,18 +159,20 @@ Partial Class ResumenVentaForm
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(127, 283)
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label9.Location = New System.Drawing.Point(195, 263)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(31, 13)
+        Me.Label9.Size = New System.Drawing.Size(49, 20)
         Me.Label9.TabIndex = 11
         Me.Label9.Text = "Total"
         '
         'lblTotal
         '
         Me.lblTotal.AutoSize = True
-        Me.lblTotal.Location = New System.Drawing.Point(219, 283)
+        Me.lblTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotal.Location = New System.Drawing.Point(283, 263)
         Me.lblTotal.Name = "lblTotal"
-        Me.lblTotal.Size = New System.Drawing.Size(16, 13)
+        Me.lblTotal.Size = New System.Drawing.Size(24, 20)
         Me.lblTotal.TabIndex = 12
         Me.lblTotal.Text = "..."
         '

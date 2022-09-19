@@ -79,10 +79,16 @@
     <Compile Include="HistorialForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListaClientes.Designer.vb">
+    <Compile Include="Pestañas\VentasForms\ListaClientes.Designer.vb">
       <DependentUpon>ListaClientes.vb</DependentUpon>
     </Compile>
-    <Compile Include="ListaClientes.vb">
+    <Compile Include="Pestañas\VentasForms\ListaClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pestañas\Historial\InformeForm.Designer.vb">
+      <DependentUpon>InformeForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pestañas\Historial\InformeForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Pestañas\VentasForms\Resumen_VentaForm.Designer.vb">
@@ -91,16 +97,16 @@
     <Compile Include="Pestañas\VentasForms\Resumen_VentaForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pestañas\VentasForms\VentasForm.Designer.vb">
+    <Compile Include="VentasForm.Designer.vb">
       <DependentUpon>VentasForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="Pestañas\VentasForms\VentasForm.vb">
+    <Compile Include="VentasForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pestañas\ProductosForm.Designer.vb">
+    <Compile Include="ProductosForm.Designer.vb">
       <DependentUpon>ProductosForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="Pestañas\ProductosForm.vb">
+    <Compile Include="ProductosForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MenuForm.vb">
@@ -110,10 +116,10 @@
       <DependentUpon>MenuForm.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pestañas\ClientesForm.Designer.vb">
+    <Compile Include="ClientesForm.Designer.vb">
       <DependentUpon>ClientesForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="Pestañas\ClientesForm.vb">
+    <Compile Include="ClientesForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -136,13 +142,16 @@
     <EmbeddedResource Include="HistorialForm.resx">
       <DependentUpon>HistorialForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListaClientes.resx">
+    <EmbeddedResource Include="Pestañas\VentasForms\ListaClientes.resx">
       <DependentUpon>ListaClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pestañas\Historial\InformeForm.resx">
+      <DependentUpon>InformeForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pestañas\VentasForms\Resumen_VentaForm.resx">
       <DependentUpon>Resumen_VentaForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pestañas\ClientesForm.resx">
+    <EmbeddedResource Include="ClientesForm.resx">
       <DependentUpon>ClientesForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuForm.resx">
@@ -154,10 +163,10 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pestañas\ProductosForm.resx">
+    <EmbeddedResource Include="ProductosForm.resx">
       <DependentUpon>ProductosForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pestañas\VentasForms\VentasForm.resx">
+    <EmbeddedResource Include="VentasForm.resx">
       <DependentUpon>VentasForm.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>

@@ -43,7 +43,7 @@ Public Class ResumenVentaForm
 
             Dim dato As String = VentasForm.dgvCarrito.Item(1, a).Value
             If Not dato = "" Then
-                MsgBox("entro")
+
                 Dim Id As Integer = VentasForm.dgvCarrito.Item(0, a).Value
                 Dim nombre As String = VentasForm.dgvCarrito.Item(0, a).Value
                 Dim precioUnidad As Decimal = VentasForm.dgvCarrito.Item(2, a).Value
@@ -70,6 +70,7 @@ Public Class ResumenVentaForm
 
     Private Sub btnFinalizar_Click(sender As Object, e As EventArgs) Handles btnFinalizar.Click
         If lblID.Text = "" Then
+            MsgBox("Seleccione Cliente")
         Else
             Try
 
